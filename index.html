@@ -460,31 +460,9 @@
         </div>
     </footer>
     
-    <!-- JavaScript -->
-    <script>
-        // Load logo and video/background
+     <!-- JavaScript -->
+     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Set logo
-            const logoImg = document.getElementById('bi-logo');
-            logoImg.src = "BI Gold Logo.png"; // This would be set to the actual logo path
-            
-            // Set background image as fallback
-            const bgImg = document.getElementById('hero-bg');
-            bgImg.src = "BI_background.jpg"; // This would be set to the first frame image
-            
-            // Try to load and play video
-            const video = document.getElementById('hero-video');
-            const videoSource = document.createElement('source');
-            videoSource.src = ""; // This would be set to the actual video path
-            videoSource.type = "video/mp4";
-            video.appendChild(videoSource);
-            
-            // Handle video loading error
-            video.addEventListener('error', function() {
-                video.style.display = 'none';
-                bgImg.style.zIndex = '-1';
-            });
-            
             // Header scroll effect
             const header = document.getElementById('header');
             window.addEventListener('scroll', function() {
@@ -511,7 +489,6 @@
                 e.preventDefault();
                 
                 // Here you would typically add code to send the form data to your server
-                // For now, we'll just show a success message
                 
                 const formData = new FormData(contactForm);
                 const formValues = Object.fromEntries(formData.entries());
